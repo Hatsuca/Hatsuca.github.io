@@ -2,10 +2,7 @@
 <html>
 <head>
 <title>Test</title>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-$(function() {
-
 	var bindingsReady = false;
 
 	function onBindingsReady(evt) {
@@ -17,13 +14,12 @@ $(function() {
 
 	document.addEventListener('onBindingsReady', onBindingsReady, false);
 
-	$('#var').text(engine.call("VRCSDK2.Networking.get_LocalPlayer"));
-        engine.call("VRCSDK2.VRC_PlayerApi.GetPlayerId")
-});
+        engine.call("ListBindings");
+
 </script>
 </head>
 <body>
 <div id="var"></div>
-Test1
+<p>Test1<p>
 </body>
 </html>
