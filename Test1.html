@@ -2,7 +2,9 @@
 <html>
 <head>
 <title>Test</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
+$(function() {
 	var bindingsReady = false;
 
 	function onBindingsReady(evt) {
@@ -14,8 +16,9 @@
 
 	document.addEventListener('onBindingsReady', onBindingsReady, false);
 
-        engine.call("ListBindings");
+        $('#var').text(engine.call("ListBindings"));
 
+});
 </script>
 </head>
 <body>
