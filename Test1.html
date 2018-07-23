@@ -5,11 +5,25 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $(function() {
+
+	var bindingsReady = false;
+
+	function onBindingsReady(evt) {
+ 	  var div = document.getElementById("message");
+  	  div.innerHTML = "Ready to go!";
+
+  	  bindingsReady = true;
+	}
+
+	document.addEventListener('onBindingsReady', onBindingsReady, false);
+
 	$('#var').text(engine.call("VRCSDK2.Networking.get_LocalPlayer"));
+        engine.call("VRCSDK2.VRC_PlayerApi.GetPlayerId")
 });
 </script>
 </head>
 <body>
 <div id="var"></div>
+Test1
 </body>
 </html>
